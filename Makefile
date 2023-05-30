@@ -1,9 +1,12 @@
-.PHONY: dialyzer style
-all: style dialyzer cover/excoveralls.html
+.PHONY: clean dialyzer style test
+all: clean style dialyzer test
+clean:
+	mix clean
+	MIX_ENV=test mix clean
 style:
 	mix format --check-formatted
 	mix credo --all
 dialyzer:
 	mix dialyzer
-cover/excoveralls.html: assets config deps lib test mix.exs
+test:
 	mix coveralls.html
