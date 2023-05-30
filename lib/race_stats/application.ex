@@ -31,8 +31,11 @@ defmodule RaceStats.Application do
   # Tell Phoenix to update the endpoint configuration
   # whenever the application is updated.
   @impl true
+  # coveralls-ignore-start
   def config_change(changed, _new, removed) do
     RaceStatsWeb.Endpoint.config_change(changed, removed)
     :ok
   end
+
+  # coveralls-ignore-stop
 end
