@@ -2,8 +2,6 @@ import Config
 
 # Configure your database
 config :race_stats, RaceStats.Repo,
-  username: "postgres",
-  password: "postgres",
   hostname: "localhost",
   database: "race_stats_dev",
   stacktrace: true,
