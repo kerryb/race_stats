@@ -34,6 +34,7 @@ defmodule RaceStats.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
+      {:dialyxir, "~> 1.3", only: [:dev], runtime: false},
       {:ecto_sql, "~> 3.6"},
       {:esbuild, "~> 0.5", runtime: Mix.env() == :dev},
       {:excoveralls, "~> 0.10", only: :test},
