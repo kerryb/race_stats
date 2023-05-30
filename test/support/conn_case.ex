@@ -20,14 +20,14 @@ defmodule RaceStatsWeb.ConnCase do
   using do
     quote do
       # The default endpoint for testing
-      @endpoint RaceStatsWeb.Endpoint
-
       use RaceStatsWeb, :verified_routes
 
       # Import conveniences for testing with connections
-      import Plug.Conn
       import Phoenix.ConnTest
+      import Plug.Conn
       import RaceStatsWeb.ConnCase
+
+      @endpoint RaceStatsWeb.Endpoint
     end
   end
 

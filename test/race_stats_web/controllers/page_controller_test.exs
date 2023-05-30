@@ -1,5 +1,5 @@
 defmodule RaceStatsWeb.PageControllerTest do
-  use RaceStatsWeb.ConnCase
+  use RaceStatsWeb.ConnCase, async: true
 
   test "GET /", %{conn: conn} do
     conn = get(conn, ~p"/")

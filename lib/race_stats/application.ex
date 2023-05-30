@@ -5,7 +5,7 @@ defmodule RaceStats.Application do
 
   use Application
 
-  @impl true
+  @impl Application
   def start(_type, _args) do
     children = [
       # Start the Telemetry supervisor
@@ -30,7 +30,7 @@ defmodule RaceStats.Application do
 
   # Tell Phoenix to update the endpoint configuration
   # whenever the application is updated.
-  @impl true
+  @impl Application
   # coveralls-ignore-start
   def config_change(changed, _new, removed) do
     RaceStatsWeb.Endpoint.config_change(changed, removed)
