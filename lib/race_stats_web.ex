@@ -18,6 +18,8 @@ defmodule RaceStatsWeb do
   those modules here.
   """
 
+  use Boundary, deps: [RaceStats, Phoenix, Ecto.Changeset], exports: [Endpoint]
+
   def static_paths, do: ~w(assets fonts images favicon.ico robots.txt)
 
   def router do

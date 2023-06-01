@@ -1,9 +1,11 @@
+# credo:disable-for-this-file Credo.Check.Refactor.ModuleDependencies
 defmodule RaceStats.Application do
   # See https://hexdocs.pm/elixir/Application.html
   # for more information on OTP Applications
   @moduledoc false
 
   use Application
+  use Boundary, top_level?: true, deps: [RaceStats, RaceStatsWeb]
 
   @impl Application
   def start(_type, _args) do

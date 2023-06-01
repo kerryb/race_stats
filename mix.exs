@@ -7,7 +7,9 @@ defmodule RaceStats.MixProject do
       version: "0.1.0",
       elixir: "~> 1.14",
       elixirc_paths: elixirc_paths(Mix.env()),
+      compilers: [:boundary | Mix.compilers()],
       elixirc_options: [warnings_as_errors: true],
+      boundary: boundary(),
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
       deps: deps(),
@@ -35,6 +37,7 @@ defmodule RaceStats.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
+      {:boundary, "~> 0.9", runtime: false},
       {:dialyxir, "~> 1.3", only: [:dev], runtime: false},
       {:ecto_sql, "~> 3.6"},
       {:esbuild, "~> 0.5", runtime: Mix.env() == :dev},
@@ -84,6 +87,16 @@ defmodule RaceStats.MixProject do
       "coveralls.detail": :test,
       "coveralls.post": :test,
       "coveralls.html": :test
+    ]
+  end
+
+  defp boundary do
+    [
+      default: [
+        check: [
+          apps: [:phoenix, :ecto]
+        ]
+      ]
     ]
   end
 end
