@@ -16,6 +16,7 @@ defmodule RaceStatsWeb.Router do
 
   scope "/", RaceStatsWeb do
     pipe_through(:browser)
+    live("/", IndexLive)
   end
 
   # Other scopes may use custom stacks.
