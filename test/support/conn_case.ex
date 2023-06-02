@@ -16,6 +16,7 @@ defmodule RaceStatsWeb.ConnCase do
   """
 
   use ExUnit.CaseTemplate
+  use Boundary, top_level?: true, check: [out: false]
 
   using do
     quote do

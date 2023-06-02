@@ -16,6 +16,7 @@ defmodule RaceStats.DataCase do
   """
 
   use ExUnit.CaseTemplate
+  use Boundary, top_level?: true, check: [out: false]
 
   alias Ecto.Adapters.SQL.Sandbox
 
