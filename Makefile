@@ -9,4 +9,4 @@ style:
 dialyzer:
 	mix dialyzer
 test:
-	mix coveralls.html
+	MIX_ENV=test mix do compile --warnings-as-errors + coveralls.html --warnings-as-errors
