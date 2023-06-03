@@ -7,5 +7,5 @@ defmodule RaceStats do
   if it comes from the database, an external API or others.
   """
 
-  use Boundary, deps: [Ecto, Ecto.Changeset], exports: []
+  use Boundary, deps: [Ecto, Ecto.Changeset], exports: [Races]
 end
