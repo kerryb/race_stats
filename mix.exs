@@ -43,6 +43,8 @@ defmodule RaceStats.MixProject do
       {:esbuild, "~> 0.5", runtime: Mix.env() == :dev},
       {:excoveralls, "~> 0.10", only: :test},
       {:credo, "~> 1.7", only: [:dev, :test], runtime: false},
+      {:ex_machina, "~> 2.7"},
+      {:faker, "~> 0.17", only: :test},
       {:finch, "~> 0.13"},
       {:floki, "~> 0.30", only: :test},
       {:gettext, "~> 0.20"},

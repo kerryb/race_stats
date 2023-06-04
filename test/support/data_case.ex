@@ -26,6 +26,7 @@ defmodule RaceStats.DataCase do
       import Ecto.Changeset
       import Ecto.Query
       import RaceStats.DataCase
+      import RaceStats.Factory
 
       alias RaceStats.Repo
     end

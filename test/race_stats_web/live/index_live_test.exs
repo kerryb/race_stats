@@ -15,7 +15,7 @@ defmodule RaceStatsWeb.IndexLiveTest do
   describe "RaceStatsWeb.IndexLive" do
     test "displays a list of results", %{conn: conn} do
       stub Races.results() do
-        [%Result{event: %Event{name: "Woodbridge"}}]
+        [%Result{event: %Event{name: "Woodbridge"}, date: ~D[2023-05-23]}]
       end
 
       {:ok, view, _html} = live(conn, "/")

@@ -9,6 +9,7 @@ defmodule RaceStats.Races.Schema.Result do
 
   typed_schema "results" do
     belongs_to(:event, Event)
+    field :date, :date, null: false, enforce: true
     timestamps(type: :naive_datetime_usec)
   end
 end
