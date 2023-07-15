@@ -20,6 +20,7 @@ defmodule RaceStatsWeb.IndexLiveTest do
 
       {:ok, view, _html} = live(conn, "/")
       assert view |> element("td", "Woodbridge") |> has_element?()
+      assert view |> element("td", "23 May 2023") |> has_element?()
     end
   end
 end

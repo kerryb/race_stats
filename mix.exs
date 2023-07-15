@@ -59,6 +59,7 @@ defmodule RaceStats.MixProject do
       {:plug_cowboy, "~> 2.5"},
       {:postgrex, ">= 0.0.0"},
       {:styler, "~> 0.7", only: [:dev, :test], runtime: false},
+      {:timex, "~> 3.7"},
       {:typed_ecto_schema, "~> 0.4"},
       {:swoosh, "~> 1.3"},
       {:tailwind, "~> 0.2", runtime: Mix.env() == :dev},
