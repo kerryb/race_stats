@@ -1,5 +1,5 @@
 .PHONY: clean dialyzer outdated style test update-deps
-all: clean style dialyzer test
+all: style dialyzer test
 clean:
 	mix clean
 	MIX_ENV=test mix clean
