@@ -3,6 +3,8 @@ defmodule RaceStatsWeb.IndexLive do
 
   use RaceStatsWeb, :live_view
 
+  import RaceStats.Time
+
   alias RaceStats.Races
 
   @impl Phoenix.LiveView

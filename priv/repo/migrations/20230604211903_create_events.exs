@@ -4,7 +4,7 @@ defmodule RaceStats.Repo.Migrations.CreateEvents do
   def change do
     create table(:events) do
       add :name, :text
-      timestamps
+      timestamps()
     end
   end
 end

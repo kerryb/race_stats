@@ -1,4 +1,5 @@
 <.table id="results" rows={@results}>
   <:col :let={result} label="Event"><%= result.event.name %></:col>
   <:col :let={result} label="Date"><%= Timex.format!(result.date, "{D} {Mshort} {YYYY}") %></:col>
+  <:col :let={result} label="Time"><%= format_seconds(result.seconds) %></:col>
 </.table>
